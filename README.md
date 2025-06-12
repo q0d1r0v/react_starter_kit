@@ -24,6 +24,7 @@ This React Starter Kit is designed to help you kickstart your React-based applic
 - 🔒 **Route Protection** - Public and Private route configuration with access control
 - 🔀 **Absolute Imports** - Clean import paths using `@/` alias
 - 🎨 **Beautiful UI** - Styled with TailwindCSS
+- 🧩 **Material UI Integration** - Prebuilt, customizable components for faster UI development
 - 📦 **Modular Structure** - Clean and organized project architecture
 - ⚡ **Development Tools** - Hot reload and dev tools configured
 - 📱 **Responsive Design** - Mobile-first approach

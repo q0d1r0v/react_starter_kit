@@ -1,6 +1,11 @@
 @import "tailwindcss";
+@import "@fontsource/roboto/300.css";
+@import "@fontsource/roboto/400.css";
+@import "@fontsource/roboto/500.css";
+@import "@fontsource/roboto/700.css";
+
 
 html, body {
   margin: 0 auto;
-  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;
 }

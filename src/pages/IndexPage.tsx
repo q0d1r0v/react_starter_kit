@@ -9,6 +9,7 @@ import {
   CheckCircle,
   Terminal,
   Rocket,
+  Layout,
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -40,6 +41,12 @@ export default function IndexPage() {
       color: "text-cyan-500",
       bg: "bg-cyan-50",
     },
+    {
+      name: "Material UI",
+      icon: Layout,
+      color: "text-indigo-500",
+      bg: "bg-indigo-50",
+    },
   ];
 
   const projectStructure = [
@@ -68,6 +75,7 @@ export default function IndexPage() {
     "🔒 Public and Private route configuration with access control",
     "🔀 Absolute alias imports configured (use @/ for cleaner paths)",
     "🎨 Beautiful UI with TailwindCSS",
+    "🧩 Material UI (MUI) integrated for reusable components and design consistency",
     "📦 Clean modular structure",
     "⚡ Hot reload and dev tools",
     "📱 Responsive design with mobile-first approach",
@@ -100,7 +108,7 @@ export default function IndexPage() {
           <h2 className="text-2xl font-semibold text-center mb-8 text-gray-800">
             🚀 Integrated Technologies
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-4">
             {technologies.map((tech, index) => (
               <Card
                 key={index}

@@ -15,6 +15,7 @@ This React Starter Kit is designed to help you kickstart your React-based applic
 | 🗄️ **Zustand**      | State Management    | Latest  |
 | ⚡ **Axios**        | HTTP Client         | Latest  |
 | 🎨 **TailwindCSS**  | Styling Framework   | Latest  |
+| 🧩 **Material UI**  | UI Components       | Latest  |
 
 ## ✨ Features
 

@@ -62,7 +62,7 @@ export default function IndexPage() {
   ];
 
   const features = [
-    "🔐 Auth middleware (redirect to /dashboard if token exists, otherwise to /login)",
+    "🔐 Auth middleware (redirect to /admin/dashboard if token exists, otherwise to /auth/login)",
     "🧠 Global state management with Zustand (example: counter)",
     "🚦 Axios Interceptor: attach token to every request",
     "🔒 Public and Private route configuration with access control",

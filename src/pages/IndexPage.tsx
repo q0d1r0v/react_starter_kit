@@ -263,7 +263,7 @@ export default function IndexPage() {
               className="text-blue-600 hover:underline ml-1"
               target="_blank"
             >
-              Check the docs
+              Click here
             </a>
           </p>
         </div>

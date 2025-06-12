@@ -164,6 +164,6 @@ Need help or have questions?
 
 **⭐ Don't forget to star this repository if it helped you!**
 
-Made with ❤️ by beko(https://github.com/q0d1rov)
+Made with by beko(https://github.com/q0d1rov)
 
 </div>

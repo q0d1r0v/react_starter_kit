@@ -1,34 +1,43 @@
-// src/App.jsx
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Suspense, lazy } from "react";
 
 // layouts
-import DefaultLayout from "@/layouts/default";
-import AuthLayout from "@/layouts/auth";
-import PrivateRoute from "@/routes/PrivateRoute";
+const DefaultLayout = lazy(() => import("@/layouts/default"));
+const AuthLayout = lazy(() => import("@/layouts/auth"));
+const PrivateRoute = lazy(() => import("@/routes/PrivateRoute"));
 
-import IndexPage from "@/pages/IndexPage";
-import IndexLoginPage from "@/pages/auth/LoginPage";
-import IndexAdminPage from "@/pages/admin/IndexAdminPage";
-import NotFoundPage from "@/pages/NotFoundPage";
+// pages
+const IndexPage = lazy(() => import("@/pages/IndexPage"));
+const IndexLoginPage = lazy(() => import("@/pages/auth/LoginPage"));
+const IndexAdminPage = lazy(() => import("@/pages/admin/IndexAdminPage"));
+const NotFoundPage = lazy(() => import("@/pages/NotFoundPage"));
 
 export default function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route element={<DefaultLayout />}>
-          <Route path="/" element={<IndexPage />} />
-        </Route>
+      <Suspense
+        fallback={
+          <div className="flex items-center justify-center h-screen text-2xl">
+            Loading...
+          </div>
+        }
+      >
+        <Routes>
+          <Route element={<DefaultLayout />}>
+            <Route path="/" element={<IndexPage />} />
+          </Route>
 
-        <Route element={<AuthLayout />}>
-          <Route path="/auth/login" element={<IndexLoginPage />} />
-        </Route>
+          <Route element={<AuthLayout />}>
+            <Route path="/auth/login" element={<IndexLoginPage />} />
+          </Route>
 
-        <Route element={<PrivateRoute />}>
-          <Route path="/admin/dashboard" element={<IndexAdminPage />} />
-        </Route>
+          <Route element={<PrivateRoute />}>
+            <Route path="/admin/dashboard" element={<IndexAdminPage />} />
+          </Route>
 
-        <Route path="*" element={<NotFoundPage />} />
-      </Routes>
+          <Route path="*" element={<NotFoundPage />} />
+        </Routes>
+      </Suspense>
     </BrowserRouter>
   );
 }

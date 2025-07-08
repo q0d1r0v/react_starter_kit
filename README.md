@@ -160,12 +160,22 @@ Need help or have questions?
 
 - 💬 [Telegram](https://t.me/qodirov_oybekjon)
 
+### 💰 Support This Project
+
+If this starter kit helped you, consider making a donation:
+
+**Bitcoin Address:**
+
+```
+1ASdGr68w7NZgZqxSEi3LYDxzcykhbkzac
+```
+
 ---
 
 <div align="center">
 
 **⭐ Don't forget to star this repository if it helped you!**
 
-Made with by beko(https://github.com/q0d1rov)
+Made with by [beko](https://github.com/q0d1rov)
 
 </div>

@@ -160,7 +160,7 @@ Need help or have questions?
 
 - 💬 [Telegram](https://t.me/qodirov_oybekjon)
 
-### 💰 Buy me a coffee
+### ☕ Buy Me a Coffee
 
 If this starter kit helped you, consider making a donation:
 

@@ -8,8 +8,6 @@ This React Starter Kit is designed to help you kickstart your React-based applic
 
 ## 🎬 Live Demo
 
-Experience the React Starter Kit in action with our live demo:
-
 ### 🌐 [**Live Demo**](https://react-starter-kit-two.vercel.app/)
 
 ## 🛠 Tech Stack

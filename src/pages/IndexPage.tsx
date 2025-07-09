@@ -62,10 +62,10 @@ export default function IndexPage() {
       description: "Public and Private route configuration",
     },
     {
-      path: "App.jsx",
+      path: "App.tsx",
       description: "Root component with router setup",
     },
-    { path: "main.jsx", description: "ReactDOM entry point" },
+    { path: "main.tsx", description: "ReactDOM entry point" },
   ];
 
   const features = [

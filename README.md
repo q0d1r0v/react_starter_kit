@@ -6,6 +6,21 @@
 
 This React Starter Kit is designed to help you kickstart your React-based application quickly and efficiently. It comes pre-configured with modern tools, authentication middleware, state management, and a clean project structure.
 
+## 🎬 Live Demo
+
+Experience the React Starter Kit in action with our live demo:
+
+### 🌐 [**Live Demo**](https://react-starter-kit-two.vercel.app/)
+
+**Demo Features:**
+
+- 🔐 **Authentication Flow** - Complete login/logout functionality
+- 📊 **Dashboard Interface** - Modern admin panel with navigation
+- 🛡️ **Protected Routes** - Route protection demonstration
+- 📱 **Responsive Design** - Mobile and desktop optimized
+- 🎨 **UI Components** - Material UI + TailwindCSS integration
+- 🔄 **State Management** - Zustand store examples in action
+
 ## 🛠 Tech Stack
 
 | Technology          | Purpose             | Version |
@@ -176,6 +191,6 @@ If this starter kit helped you, consider making a donation:
 
 **⭐ Don't forget to star this repository if it helped you!**
 
-Made with by [beko](https://github.com/q0d1rov)
+Made with ❤️ by [beko](https://github.com/q0d1rov)
 
 </div>

@@ -180,6 +180,6 @@ If this starter kit helped you, consider making a donation:
 
 **⭐ Don't forget to star this repository if it helped you!**
 
-Made with ❤️ by [beko](https://github.com/q0d1rov)
+Made with ❤️ by [beko](https://github.com/q0d1r0v)
 
 </div>

@@ -1,0 +1,17 @@
+.loading-bar {
+  width: 20%;
+  height: 100%;
+  background: linear-gradient(to right, #3b82f6 0%, #3b82f6 50%, #3b82f6 100%);
+  animation: shimmer 0.8s infinite linear;
+  position: absolute;
+  left: -20%;
+}
+
+@keyframes shimmer {
+  0% {
+    left: -20%;
+  }
+  100% {
+    left: 100%;
+  }
+}

@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Suspense, lazy } from "react";
+import "@/styles/LoadingBar.css";
 
 // layouts
 const DefaultLayout = lazy(() => import("@/layouts/default"));
@@ -17,8 +18,11 @@ export default function App() {
     <BrowserRouter>
       <Suspense
         fallback={
-          <div className="flex items-center justify-center h-screen text-2xl">
-            Loading...
+          <div className="relative w-full h-screen bg-white">
+            {/* Loading Line */}
+            <div className="fixed top-0 left-0 w-full h-1 bg-blue-200 overflow-hidden z-50">
+              <div className="loading-bar" />
+            </div>
           </div>
         }
       >

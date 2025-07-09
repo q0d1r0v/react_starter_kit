@@ -12,15 +12,6 @@ Experience the React Starter Kit in action with our live demo:
 
 ### 🌐 [**Live Demo**](https://react-starter-kit-two.vercel.app/)
 
-**Demo Features:**
-
-- 🔐 **Authentication Flow** - Complete login/logout functionality
-- 📊 **Dashboard Interface** - Modern admin panel with navigation
-- 🛡️ **Protected Routes** - Route protection demonstration
-- 📱 **Responsive Design** - Mobile and desktop optimized
-- 🎨 **UI Components** - Material UI + TailwindCSS integration
-- 🔄 **State Management** - Zustand store examples in action
-
 ## 🛠 Tech Stack
 
 | Technology          | Purpose             | Version |

@@ -40,8 +40,8 @@ src/
 ├── api/             # Axios instances and HTTP interceptors
 ├── layout/          # Layout components (navbar, sidebar, footer)
 ├── routes/          # Public and Private route configurations
-├── App.jsx          # Root component with router setup
-└── main.jsx         # ReactDOM entry point
+├── App.tsx          # Root component with router setup
+└── main.tsx         # ReactDOM entry point
 ```
 
 ## 🚀 Getting Started
@@ -110,8 +110,8 @@ The starter kit includes authentication middleware that:
 
 Global state is managed using Zustand. Example store:
 
-```javascript
-// stores/counterStore.js
+```typescript
+// stores/counterStore.ts
 import { create } from "zustand";
 
 export const useCounterStore = create((set) => ({

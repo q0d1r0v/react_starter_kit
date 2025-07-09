@@ -388,37 +388,6 @@ export default function IndexPage() {
             </div>
           </CardContent>
         </Card>
-
-        {/* Footer */}
-        <div className="text-center mt-12 space-y-4">
-          <div className="text-gray-500">
-            <p className="text-sm">
-              💡 Need help or have questions?
-              <a
-                href="https://t.me/qodirov_oybekjon"
-                className="text-blue-600 hover:underline ml-1"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Click here
-              </a>
-            </p>
-          </div>
-
-          <div className="text-gray-400 text-xs">
-            <p>
-              Made with ❤️ for the developer community •
-              <a
-                href="https://github.com/q0d1r0v/react_starter_kit"
-                className="text-blue-500 hover:underline ml-1"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Star on GitHub
-              </a>
-            </p>
-          </div>
-        </div>
       </div>
     </div>
   );

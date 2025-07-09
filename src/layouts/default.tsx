@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-import { Heart, Star, MessageCircle, Github } from "lucide-react";
+import { Star, MessageCircle, Github } from "lucide-react";
 
 export default function DefaultLayout() {
   return (

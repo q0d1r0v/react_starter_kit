@@ -189,7 +189,7 @@ export default function IndexPage() {
                   ✨ Project Features
                 </h2>
               </div>
-              <div className="space-y-3">
+              <div className="space-y-5">
                 {features.map((feature, index) => (
                   <div key={index} className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-green-500 shrink-0 mt-0.5" />

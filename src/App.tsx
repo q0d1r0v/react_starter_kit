@@ -19,7 +19,6 @@ export default function App() {
       <Suspense
         fallback={
           <div className="relative w-full h-screen bg-white">
-            {/* Loading Line */}
             <div className="fixed top-0 left-0 w-full h-1 bg-blue-200 overflow-hidden z-50">
               <div className="loading-bar" />
             </div>

@@ -60,21 +60,18 @@ export default function IndexPage() {
   ];
 
   const projectStructure = [
+    // Folders first (alphabetical order)
+    { path: "api/", description: "Axios instances and interceptors" },
+    { path: "layout/", description: "Layouts: navbar, sidebar, footer" },
     { path: "pages/", description: "Pages, including IndexPage" },
+    { path: "routes/", description: "Public and Private route configuration" },
     {
       path: "stores/",
       description: "Stores for global state management with Zustand",
     },
-    { path: "api/", description: "Axios instances and interceptors" },
-    { path: "layout/", description: "Layouts: navbar, sidebar, footer" },
-    {
-      path: "routes/",
-      description: "Public and Private route configuration",
-    },
-    {
-      path: "App.tsx",
-      description: "Root component with router setup",
-    },
+    { path: "styles/", description: "Global and component styles" },
+
+    { path: "App.tsx", description: "Root component with router setup" },
     { path: "main.tsx", description: "ReactDOM entry point" },
   ];
 

@@ -10,11 +10,21 @@ import {
   Terminal,
   Rocket,
   Layout,
+  Coffee,
+  Heart,
+  Copy,
+  Check,
+  Bitcoin,
+  DollarSign,
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { useState } from "react";
 
 export default function IndexPage() {
+  const [copiedAddress, setCopiedAddress] = useState(false);
+  const bitcoinAddress = "1ASdGr68w7NZgZqxSEi3LYDxzcykhbkzac";
+
   const technologies = [
     { name: "React 18", icon: Code, color: "text-blue-500", bg: "bg-blue-50" },
     {
@@ -81,6 +91,16 @@ export default function IndexPage() {
     "📱 Responsive design with mobile-first approach",
     "🔧 ESLint and Prettier configured",
   ];
+
+  const handleCopyAddress = async () => {
+    try {
+      await navigator.clipboard.writeText(bitcoinAddress);
+      setCopiedAddress(true);
+      setTimeout(() => setCopiedAddress(false), 2000);
+    } catch (err) {
+      console.error("Failed to copy address:", err);
+    }
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
@@ -187,7 +207,7 @@ export default function IndexPage() {
         </div>
 
         {/* Installation Section */}
-        <Card className="shadow-xl bg-gradient-to-r from-gray-900 to-gray-800 text-white rounded-2xl">
+        <Card className="shadow-xl bg-gradient-to-r from-gray-900 to-gray-800 text-white rounded-2xl mb-12">
           <CardContent className="p-8 space-y-6">
             <div className="text-center">
               <div className="flex items-center justify-center gap-3 mb-3">
@@ -262,18 +282,145 @@ export default function IndexPage() {
           </CardContent>
         </Card>
 
+        {/* Buy Me a Coffee Section */}
+        <Card className="shadow-xl bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 text-white rounded-2xl mb-12">
+          <CardContent className="p-8">
+            <div className="text-center mb-8">
+              <div className="flex items-center justify-center gap-3 mb-4">
+                <Coffee className="w-8 h-8 text-white animate-pulse" />
+                <h2 className="text-3xl font-bold">☕ Buy Me a Coffee</h2>
+              </div>
+              <p className="text-xl text-white/90 max-w-2xl mx-auto leading-relaxed">
+                If this starter kit helped you build something amazing, consider
+                supporting the development with a small donation!
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              {/* Left Side - Why Support */}
+              <div className="space-y-6">
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                  <h3 className="text-xl font-semibold mb-4 flex items-center gap-2">
+                    <Heart className="w-5 h-5 text-red-300" />
+                    Why Support This Project?
+                  </h3>
+                  <ul className="space-y-3 text-white/90">
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-5 h-5 text-green-300 shrink-0 mt-0.5" />
+                      <span>Hours of development and testing</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-5 h-5 text-green-300 shrink-0 mt-0.5" />
+                      <span>Continuous updates and improvements</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-5 h-5 text-green-300 shrink-0 mt-0.5" />
+                      <span>Free and open-source for everyone</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                  <h3 className="text-xl font-semibold mb-4 flex items-center gap-2">
+                    <DollarSign className="w-5 h-5 text-green-300" />
+                    Your Support Helps With:
+                  </h3>
+                  <ul className="space-y-2 text-white/90">
+                    <li>• Development tools and resources</li>
+                    <li>• Time for new features and bug fixes</li>
+                    <li>• Community support and documentation</li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* Right Side - Donation Methods */}
+              <div className="space-y-6">
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                  <h3 className="text-xl font-semibold mb-4 flex items-center gap-2">
+                    <Bitcoin className="w-5 h-5 text-orange-300" />
+                    Bitcoin Donation
+                  </h3>
+                  <p className="text-white/90 mb-4">
+                    Send any amount to the Bitcoin address below:
+                  </p>
+
+                  <div className="bg-black/30 rounded-lg p-4 mb-4">
+                    <div className="flex items-center justify-between gap-2">
+                      <code className="text-sm font-mono text-blue-200 break-all">
+                        {bitcoinAddress}
+                      </code>
+                      <button
+                        onClick={handleCopyAddress}
+                        className="p-2 bg-white/20 hover:bg-white/30 rounded-lg transition-colors shrink-0"
+                        title="Copy address"
+                      >
+                        {copiedAddress ? (
+                          <Check className="w-4 h-4 text-green-300" />
+                        ) : (
+                          <Copy className="w-4 h-4 text-white" />
+                        )}
+                      </button>
+                    </div>
+                  </div>
+
+                  {copiedAddress && (
+                    <div className="bg-green-500/20 border border-green-400/30 rounded-lg p-3 mb-4">
+                      <p className="text-green-200 text-sm font-medium">
+                        ✅ Address copied to clipboard!
+                      </p>
+                    </div>
+                  )}
+
+                  <div className="bg-blue-500/20 border border-blue-400/30 rounded-lg p-3">
+                    <p className="text-blue-200 text-sm">
+                      💡 <strong>Tip:</strong> Even small donations like $1-5
+                      make a huge difference and are greatly appreciated!
+                    </p>
+                  </div>
+                </div>
+
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                  <h3 className="text-xl font-semibold mb-4">🙏 Thank You!</h3>
+                  <p className="text-white/90 leading-relaxed">
+                    Even a small donation helps keep the project going and
+                    supports the creation of new useful tools. Thank you for
+                    your support!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+
         {/* Footer */}
-        <div className="text-center mt-12 text-gray-500">
-          <p className="text-sm">
-            💡 Need help or have questions?
-            <a
-              href="https://t.me/qodirov_oybekjon"
-              className="text-blue-600 hover:underline ml-1"
-              target="_blank"
-            >
-              Click here
-            </a>
-          </p>
+        <div className="text-center mt-12 space-y-4">
+          <div className="text-gray-500">
+            <p className="text-sm">
+              💡 Need help or have questions?
+              <a
+                href="https://t.me/qodirov_oybekjon"
+                className="text-blue-600 hover:underline ml-1"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Click here
+              </a>
+            </p>
+          </div>
+
+          <div className="text-gray-400 text-xs">
+            <p>
+              Made with ❤️ for the developer community •
+              <a
+                href="https://github.com/q0d1r0v/react_starter_kit"
+                className="text-blue-500 hover:underline ml-1"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Star on GitHub
+              </a>
+            </p>
+          </div>
         </div>
       </div>
     </div>
